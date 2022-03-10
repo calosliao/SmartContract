@@ -1,0 +1,89 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract smart/441.sol:BasicToken:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 74.7%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/441.sol:Bonus:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 100.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/441.sol:QCOToken:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 20.9%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/441.sol:613:37: Warning: Integer Underflow.
+        return Bonus.getBonusFactor(now - pauseOffset
+Integer Underflow occurs if:
+    pauseOffset = 1
+    weiAmount = 0
+INFO:symExec:smart/441.sol:631:32: Warning: Integer Overflow.
+        return basisTokens.mul(per_mill + perMillBonus
+Integer Overflow occurs if:
+    pauseOffset = 0
+    weiAmount = 0
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/441.sol:QravityTeamTimelock:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 25.8%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/441.sol:43:17: Warning: Integer Overflow.
+    uint256 c = a + b
+Integer Overflow occurs if:
+    releasedAmount = 90124977372327004031758570853785828543150413892121215297380148023055890776064
+    _amount = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    controller = 0
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/441.sol:SafeMath:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 100.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/441.sol:StandardToken:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 85.4%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/441.sol:43:17: Warning: Integer Overflow.
+    uint256 c = a + b
+Integer Overflow occurs if:
+    allowed[msg.sender][_spender] = 1
+    _addedValue = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+INFO:symExec:	====== Analysis Completed ======

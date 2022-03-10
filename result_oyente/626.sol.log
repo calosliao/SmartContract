@@ -1,0 +1,99 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract smart/586.sol:Obredis:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 50.8%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/586.sol:54:5: Warning: Integer Underflow.
+    string public name
+smart/586.sol:56:5: Warning: Integer Underflow.
+    string public symbol
+INFO:symExec:smart/586.sol:149:26: Warning: Integer Overflow.
+            if (balances[addresses[i]
+Integer Overflow occurs if:
+    addresses.length = 4294967295
+    _last = 4294967294
+    _first = 2
+    fundsWallet = 0
+smart/586.sol:150:29: Warning: Integer Overflow.
+                awaitingRew[addresses[i]
+Integer Overflow occurs if:
+    addresses.length = 4294967295
+    _last = 4294967294
+    _first = 2
+    fundsWallet = 0
+    balances[addresses[i]] = 0
+smart/586.sol:26:13: Warning: Integer Overflow.
+            balances[_to] += _value
+Integer Overflow occurs if:
+    balances[_to] = 115792089237316195423570985008687907852929702298719625575994204896882187098296
+    allowed[_from][msg.sender] = 43422033463993573283839119378257965444976244249615211514796594002966269975960
+    balances[_from] = 43422033463993573283839119378257965444976244249615211514796594002966269975960
+smart/586.sol:162:29: Warning: Integer Overflow.
+            if (awaitingRew[addresses[i]
+Integer Overflow occurs if:
+    addresses.length = 115791205813783806231406193359937536394012070923692126229978523204812483330047
+    awaitingRew[addresses[i]] = 0
+smart/586.sol:152:17: Warning: Integer Overflow.
+                addresses[i]
+Integer Overflow occurs if:
+    addresses.length = 4294967295
+    awaitingRew[addresses[i]] = 255
+    balances[addresses[i]] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    _last = 4294967294
+    _first = 2
+    fundsWallet = 0
+smart/586.sol:152:59: Warning: Integer Overflow.
+                addresses[i].transfer((newReward*balances[addresses[i]
+Integer Overflow occurs if:
+    addresses.length = 4294967295
+    awaitingRew[addresses[i]] = 255
+    balances[addresses[i]] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    _last = 4294967295
+    _first = 0
+    fundsWallet = 0
+    balances[addresses[i]] = 0
+smart/586.sol:151:36: Warning: Integer Overflow.
+            } else if (awaitingRew[addresses[i]
+Integer Overflow occurs if:
+    addresses.length = 4294967295
+    balances[addresses[i]] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    _last = 4294967294
+    _first = 2
+    fundsWallet = 0
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/586.sol:StandardToken:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 95.6%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/586.sol:26:13: Warning: Integer Overflow.
+            balances[_to] += _value
+Integer Overflow occurs if:
+    _value = 43422033463993573283839119378257965444976244249615211514796594002966269975960
+    balances[_to] = 115792089237316195423570985008687907852929702298719625575994204896882187098296
+    allowed[_from][msg.sender] = 43422033463993573283839119378257965444976244249615211514796594002966269975960
+    balances[_from] = 43422033463993573283839119378257965444976244249615211514796594002966269975960
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/586.sol:Token:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 99.8%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======

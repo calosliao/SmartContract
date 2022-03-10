@@ -1,0 +1,40 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract smart/257.sol:GravatarRegistry:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 15.7%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/257.sol:61:5: Warning: Integer Overflow.
+    gravatars.push(Gravatar(0x0, " ", " "))
+Integer Overflow occurs if:
+    gravatars.push(Gravatar(0x0, " ", " ")) = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/257.sol:33:3: Warning: Integer Overflow.
+  function updateGravatarName(string _displayName) public {
+  ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    _displayName = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/257.sol:30:13: Warning: Integer Overflow.
+    return (gravatars[id]
+Integer Overflow occurs if:
+    ownerToGravatar[owner] = 115792089237316195423570985008687907853269984665640564039457575000713874898943
+    gravatars[id] = 115792089237316195423570985008687907853269984665640564039457575000713874898944
+smart/257.sol:43:3: Warning: Integer Overflow.
+  function updateGravatarImage(string _imageUrl) public {
+  ^
+Spanning multiple lines.
+smart/257.sol:18:3: Warning: Integer Overflow.
+  function createGravatar(string _displayName, string _imageUrl) public {
+  ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    _displayName = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/257.sol:13:3: Warning: Integer Overflow.
+  Gravatar[] public gravatars
+INFO:symExec:	====== Analysis Completed ======

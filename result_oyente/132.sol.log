@@ -1,0 +1,43 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract smart/38.sol:MultiSigWallet:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 29.1%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  True
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/38.sol:142:26: Warning: Integer Underflow.
+        for (uint i=0; i<owners.length - 1
+Integer Underflow occurs if:
+    owners.length = 0
+    isOwner[owner] = 255
+INFO:symExec:smart/38.sol:317:46: Warning: Integer Overflow.
+            if (confirmations[transactionId][owners[i]
+Integer Overflow occurs if:
+    owners.length = 115791205813783806231406193359937536394012070923692126229978523204812483330047
+    confirmations[transactionId][owners[i]] = 0
+smart/38.sol:32:5: Warning: Integer Overflow.
+    address[] public owners
+smart/38.sol:332:32: Warning: Integer Overflow.
+                || executed && transactions[i].executed
+Integer Overflow occurs if:
+    transactionCount = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/38.sol:274:46: Warning: Integer Overflow.
+            if (confirmations[transactionId][owners[i]
+Integer Overflow occurs if:
+    owners.length = 115792082335569848633007197573932045576244532214531591869071028845388905840639
+    required = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    confirmations[transactionId][owners[i]] = 0
+smart/38.sol:331:32: Warning: Integer Overflow.
+            if (   pending && !transactions[i].executed
+Integer Overflow occurs if:
+    transactionCount = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+INFO:symExec:smart/38.sol:249:23: Warning: Callstack Depth Attack Vulnerability.
+            result := call(
+            ^
+Spanning multiple lines.
+INFO:symExec:	====== Analysis Completed ======

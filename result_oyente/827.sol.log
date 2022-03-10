@@ -1,0 +1,69 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract smart/809.sol:ChelseavsArsenal:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 55.5%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/809.sol:1025:1: Warning: Integer Underflow.
+contract ChelseavsArsenal is usingOraclize {
+^
+Spanning multiple lines.
+Integer Underflow occurs if:
+    completed = 0
+    OAR = 0
+    EXPECTED_END = 115792089237316195373354171125594461742583669279979232710638740452063414583295
+    BETTING_CLOSES = 115792089237316195373354171125594461742583669279979232710638740452063414583294
+    OWNERS = 0
+    winningOption = 2
+smart/809.sol:1147:22: Warning: Integer Underflow.
+    BETTING_CLOSES = EXPECTED_START - 60
+Integer Underflow occurs if:
+    _EXPECTED_START = 59
+    OWNERS = 0
+INFO:symExec:smart/809.sol:1242:10: Warning: Integer Overflow.
+    bets[betterInfo[addr].betOption
+smart/809.sol:1187:5: Warning: Integer Overflow.
+    oraclizeFees += oraclize_getPrice(datasource, gas)
+Integer Overflow occurs if:
+    oraclizeFees = 104951158869359237133766095869857390442880818069066072679434997700134111805440
+    completed = 0
+    oraclize = 0
+    OAR = 1461501637330902918203684832716283019655932542975
+    EXPECTED_END = 8
+    BETTING_CLOSES = 7
+    OWNERS = 0
+    winningOption = 2
+smart/809.sol:1250:12: Warning: Integer Overflow.
+    return betterInfo[addr].withdrawn
+smart/809.sol:122:5: Warning: Integer Overflow.
+    function __callback(bytes32 myid, string result) {
+    ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    result = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/809.sol:1201:3: Warning: Integer Overflow.
+  function __callback(bytes32 queryId, string result, bytes proof) public canDetermineWinner {
+  ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    result = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/809.sol:1064:3: Warning: Integer Overflow.
+  address[] public betters
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/809.sol:usingOraclize:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 29.5%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======

@@ -1,0 +1,25 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract smart/43.sol:Presale:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 73.9%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): True
+INFO:symExec:	  Timestamp Dependency: 		 True
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/43.sol:8:5: Warning: Integer Overflow.
+    Deposit[] public Deposits
+smart/43.sol:25:13: Warning: Integer Overflow.
+            Deposits.push(newDeposit)
+INFO:symExec:Flow1
+smart/43.sol:40:17: Warning: Transaction-Ordering Dependency.
+                msg.sender.transfer(amount)
+Flow2
+smart/43.sol:49:13: Warning: Transaction-Ordering Dependency.
+            msg.sender.transfer(this.balance)
+INFO:symExec:smart/43.sol:36:13: Warning: Timestamp Dependency.
+        if (now >= refundDate && isClosed==false
+INFO:symExec:	====== Analysis Completed ======

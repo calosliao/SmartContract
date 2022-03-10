@@ -1,0 +1,33 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract smart/157.sol:SingleSourceAuthority:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 99.9%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/157.sol:55:17: Warning: Integer Overflow.
+            if (authority.validFrom
+smart/157.sol:78:9: Warning: Integer Overflow.
+        authority.revokedBy
+Integer Overflow occurs if:
+    rootAuthority = 0
+smart/157.sol:55:82: Warning: Integer Overflow.
+            if (authority.validFrom <= blockNumber && (authority.validTo == 0 || authority.validTo
+smart/157.sol:55:56: Warning: Integer Overflow.
+            if (authority.validFrom <= blockNumber && (authority.validTo
+smart/157.sol:79:9: Warning: Integer Overflow.
+        authority.validTo
+Integer Overflow occurs if:
+    rootAuthority = 0
+smart/157.sol:15:5: Warning: Integer Overflow.
+    mapping(address => Authority) public authorities
+smart/157.sol:73:9: Warning: Integer Overflow.
+        authorities[authorityAddress] = authority
+Integer Overflow occurs if:
+    rootAuthority = 0
+INFO:symExec:	====== Analysis Completed ======

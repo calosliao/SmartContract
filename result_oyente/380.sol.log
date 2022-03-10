@@ -1,0 +1,139 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract smart/313.sol:DEXified:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 83.2%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/313.sol:99:16: Warning: Integer Overflow.
+        return contributor.balance
+smart/313.sol:178:18: Warning: Integer Overflow.
+        return ([offer.price
+smart/313.sol:173:16: Warning: Integer Overflow.
+        return sales.items[index]
+Integer Overflow occurs if:
+    index = 115792089237316195423570985008687907853269984665640564039457575000713874898943
+    sales.items[index] = 115792089237316195423570985008687907853269984665640564039457575000713874898944
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/313.sol:ERC20:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 91.5%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/313.sol:99:16: Warning: Integer Overflow.
+        return contributor.balance
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/313.sol:Ethnamed:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 38.8%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): True
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/313.sol:269:9: Warning: Integer Underflow.
+        return lookup[_hash]
+Integer Underflow occurs if:
+    return lookup[_hash] = 1
+INFO:symExec:smart/313.sol:99:16: Warning: Integer Overflow.
+        return contributor.balance
+smart/313.sol:264:5: Warning: Integer Overflow.
+    function resolve(string _name) public view returns (string) {
+    ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    _name = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/313.sol:178:18: Warning: Integer Overflow.
+        return ([offer.price
+smart/313.sol:378:5: Warning: Integer Overflow.
+    function setOrUpdateRecord(
+    ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    _length = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/313.sol:173:16: Warning: Integer Overflow.
+        return sales.items[index]
+Integer Overflow occurs if:
+    sales.items[index] = 115792089237316195423570985008687907853269984665640564039457575000713874898944
+smart/313.sol:356:5: Warning: Integer Overflow.
+    function setOrUpdateRecord2(
+    ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    _length = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/313.sol:272:5: Warning: Integer Overflow.
+    function transferOwnership(string _name, address _to) public {
+    ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    _name = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/313.sol:296:5: Warning: Integer Overflow.
+    function removeNameByOwner(string _name) public {
+    ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    _name = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/313.sol:306:5: Warning: Integer Overflow.
+    function sendTo(string _name) public payable {
+    ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    _name = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/313.sol:289:5: Warning: Integer Overflow.
+    function removeExpiredName(string _name) public {
+    ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    _name = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+INFO:symExec:Flow1
+smart/313.sol:257:9: Warning: Transaction-Ordering Dependency.
+        _to.transfer(address(this).balance)
+Flow2
+smart/313.sol:227:9: Warning: Transaction-Ordering Dependency.
+        _owner.transfer(msg.value)
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/313.sol:Issuer:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 99.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/313.sol:SafeMath:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 100.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/313.sol:StringHelper:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 100.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======

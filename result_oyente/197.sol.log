@@ -1,0 +1,162 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract smart/109.sol:Advertisement:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 68.6%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/109.sol:579:17: Warning: Integer Overflow.
+                devBalance.devs.push(dev)
+Integer Overflow occurs if:
+    bidIdList.length = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    owner = 0
+smart/109.sol:681:9: Warning: Integer Overflow.
+        bidIdList.push(campaign.bidId)
+Integer Overflow occurs if:
+    budget = 99680074490191866274164813673650923762147211753355305550131047636265089368064
+    endDate = 0
+    bidIdList.length = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    startDate = 0
+    price = 99680074490191866274164813673650923762147211753355305550131047636265089368064
+smart/109.sol:607:28: Warning: Integer Overflow.
+            cancelCampaign(bidIdList[i]
+Integer Overflow occurs if:
+    bidIdList.length = 115792089237316195423570985008687907853269984665640564039457584007913129639423
+    owner = 0
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/109.sol:AdvertisementFinance:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 89.8%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/109.sol:326:9: Warning: Integer Underflow.
+        balanceDevelopers[_developer] -= _value
+Integer Underflow occurs if:
+    balanceDevelopers[_developer] = 0
+    advertisementContract = 0
+INFO:symExec:smart/109.sol:315:13: Warning: Integer Overflow.
+            developers.push(_developer)
+Integer Overflow occurs if:
+    developerExists[_developer] = 0
+    advertisementContract = 0
+smart/109.sol:339:54: Warning: Integer Overflow.
+            withdraw(developers[i],balanceDevelopers[developers[i]
+Integer Overflow occurs if:
+    developers.length = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    owner = 0
+smart/109.sol:319:9: Warning: Integer Overflow.
+        balanceDevelopers[_developer] += _value
+Integer Overflow occurs if:
+    balanceDevelopers[_developer] = 1
+    developerExists[_developer] = 255
+    advertisementContract = 0
+smart/109.sol:339:22: Warning: Integer Overflow.
+            withdraw(developers[i]
+Integer Overflow occurs if:
+    developers.length = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    owner = 0
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/109.sol:AdvertisementStorage:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 68.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/109.sol:170:9: Warning: Integer Overflow.
+        campaigns[bidId].budget
+Integer Overflow occurs if:
+    allowedAddresses[msg.sender] = 255
+smart/109.sol:185:9: Warning: Integer Overflow.
+        campaigns[bidId].startDate
+Integer Overflow occurs if:
+    allowedAddresses[msg.sender] = 255
+smart/109.sol:193:16: Warning: Integer Overflow.
+        return campaigns[bidId].endDate
+smart/109.sol:230:9: Warning: Integer Overflow.
+        campaigns[bidId].owner
+Integer Overflow occurs if:
+    allowedAddresses[msg.sender] = 255
+smart/109.sol:155:9: Warning: Integer Overflow.
+        campaigns[bidId].price
+Integer Overflow occurs if:
+    allowedAddresses[msg.sender] = 255
+smart/109.sol:148:16: Warning: Integer Overflow.
+        return campaigns[bidId].price
+smart/109.sol:208:16: Warning: Integer Overflow.
+        return campaigns[bidId].valid
+smart/109.sol:223:16: Warning: Integer Overflow.
+        return campaigns[bidId].owner
+smart/109.sol:105:13: Warning: Integer Overflow.
+            campaign.budget
+smart/109.sol:108:13: Warning: Integer Overflow.
+            campaign.valid
+smart/109.sol:104:13: Warning: Integer Overflow.
+            campaign.price
+smart/109.sol:215:9: Warning: Integer Overflow.
+        campaigns[bidId].valid
+Integer Overflow occurs if:
+    allowedAddresses[msg.sender] = 255
+smart/109.sol:200:9: Warning: Integer Overflow.
+        campaigns[bidId].endDate
+Integer Overflow occurs if:
+    allowedAddresses[msg.sender] = 255
+smart/109.sol:107:13: Warning: Integer Overflow.
+            campaign.endDate
+smart/109.sol:106:13: Warning: Integer Overflow.
+            campaign.startDate
+smart/109.sol:163:16: Warning: Integer Overflow.
+        return campaigns[bidId].budget
+smart/109.sol:109:13: Warning: Integer Overflow.
+            campaign.owner
+smart/109.sol:178:16: Warning: Integer Overflow.
+        return campaigns[bidId].startDate
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/109.sol:AppCoins:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 82.9%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/109.sol:485:9: Warning: Integer Underflow.
+        totalSupply -= _value
+Integer Underflow occurs if:
+    _value = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    totalSupply = 115792089237316195423570985008687907853269984665640564039457584007913129639934
+    balances[msg.sender] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/109.sol:503:9: Warning: Integer Underflow.
+        totalSupply -= _value
+Integer Underflow occurs if:
+    _value = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    totalSupply = 115792089237316195423570985008687907853269984665640564039457584007913129639934
+    allowance[_from][msg.sender] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+    balances[_from] = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/109.sol:CampaignLibrary:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 100.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======

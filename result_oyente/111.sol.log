@@ -1,0 +1,97 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract smart/15.sol:ContractLib:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 100.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/15.sol:NXX:
+INFO:symExec:	============ Results ===========
+Exception symExec.TimeoutError: TimeoutError('Timer expired',) in <bound method BitVecRef.__del__ of Extract(159, 0, Is)> ignored
+INFO:symExec:	  EVM Code Coverage: 			 66.0%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/15.sol:209:3: Warning: Integer Underflow.
+		return name
+Integer Underflow occurs if:
+    return name = 1
+smart/15.sol:213:3: Warning: Integer Underflow.
+		return symbol
+Integer Underflow occurs if:
+    return symbol = 1
+INFO:symExec:smart/15.sol:225:2: Warning: Integer Overflow.
+	function transfer(address _to, uint _value, bytes _data) public whenNotPaused returns (bool) {
+	^
+Spanning multiple lines.
+smart/15.sol:403:8: Warning: Integer Overflow.
+			if (supportedERC20Token[i]
+Integer Overflow occurs if:
+    supportedERC20Token.length = 115792089210356248756420345214020892766250353992003419616917011526809519390719
+    supportedERC20Token[i] = 0
+    owner = 0
+smart/15.sol:407:24: Warning: Integer Overflow.
+                delete supportedERC20Token[length-1]
+Integer Overflow occurs if:
+    supportedERC20Token[i] = 1461501637330902918203684832716283019655932542975
+    supportedERC20Token[i] = 0
+    supportedERC20Token[i] = 0
+    supportedERC20Token[i] = 0
+    supportedERC20Token[i] = 0
+    supportedERC20Token[i] = 0
+    supportedERC20Token[i] = 0
+    owner = 0
+    supportedERC20Token.length = 7
+smart/15.sol:115:9: Warning: Integer Overflow.
+    c = a + b
+Integer Overflow occurs if:
+    allowed[msg.sender][_spender] = 1
+    paused = 0
+smart/15.sol:389:3: Warning: Integer Overflow.
+		supportedERC20Token.push(_address)
+Integer Overflow occurs if:
+    owner = 0
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/15.sol:Ownable:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 99.7%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/15.sol:Pausable:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 99.8%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/15.sol:SafeMath:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 100.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======

@@ -1,0 +1,185 @@
+WARNING:root:You are using evm version 1.8.2. The supported version is 1.7.3
+WARNING:root:You are using solc version 0.4.21, The latest supported version is 0.4.19
+INFO:root:contract smart/44.sol:CrowdsaleTokenExt:
+INFO:symExec:	============ Results ===========
+Exception symExec.TimeoutError: TimeoutError('Timer expired',) in <bound method BitVecNumRef.__del__ of 256> ignored
+INFO:symExec:	  EVM Code Coverage: 			 68.8%
+INFO:symExec:	  Integer Underflow: 			 True
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/44.sol:1449:3: Warning: Integer Underflow.
+  string public name
+smart/44.sol:1451:3: Warning: Integer Underflow.
+  string public symbol
+INFO:symExec:smart/44.sol:1366:12: Warning: Integer Overflow.
+    return reservedTokensList[addr].inPercentageUnit
+smart/44.sol:1354:12: Warning: Integer Overflow.
+    return reservedTokensList[addr].isReserved
+smart/44.sol:1358:12: Warning: Integer Overflow.
+    return reservedTokensList[addr].isDistributed
+smart/44.sol:1330:3: Warning: Integer Overflow.
+  address[] public reservedTokensDestinations
+smart/44.sol:1526:3: Warning: Integer Overflow.
+  function setTokenInformation(string _name, string _symbol) onlyOwner {
+  ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    _name = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/44.sol:44:14: Warning: Integer Overflow.
+    uint c = a + b
+Integer Overflow occurs if:
+    balances[_to] = 1
+    released = 372682917519380244141939632342652170012262798458880
+smart/44.sol:1370:12: Warning: Integer Overflow.
+    return reservedTokensList[addr].inPercentageDecimals
+smart/44.sol:1373:3: Warning: Integer Overflow.
+  function setReservedTokensListMultiple(
+  ^
+Spanning multiple lines.
+smart/44.sol:1329:3: Warning: Integer Overflow.
+  mapping (address => ReservedTokensData) public reservedTokensList
+smart/44.sol:1350:5: Warning: Integer Overflow.
+    reservedTokensData.isDistributed
+Integer Overflow occurs if:
+    mintingFinished = 0
+    mintAgents[msg.sender] = 255
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/44.sol:Haltable:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 99.8%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/44.sol:MintableTokenExt:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 74.4%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/44.sol:1366:12: Warning: Integer Overflow.
+    return reservedTokensList[addr].inPercentageUnit
+smart/44.sol:1354:12: Warning: Integer Overflow.
+    return reservedTokensList[addr].isReserved
+smart/44.sol:1358:12: Warning: Integer Overflow.
+    return reservedTokensList[addr].isDistributed
+smart/44.sol:1330:3: Warning: Integer Overflow.
+  address[] public reservedTokensDestinations
+smart/44.sol:44:14: Warning: Integer Overflow.
+    uint c = a + b
+Integer Overflow occurs if:
+    balances[_to] = 1
+smart/44.sol:1370:12: Warning: Integer Overflow.
+    return reservedTokensList[addr].inPercentageDecimals
+smart/44.sol:1373:3: Warning: Integer Overflow.
+  function setReservedTokensListMultiple(
+  ^
+Spanning multiple lines.
+Integer Overflow occurs if:
+    addrs = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+smart/44.sol:1329:3: Warning: Integer Overflow.
+  mapping (address => ReservedTokensData) public reservedTokensList
+smart/44.sol:1350:5: Warning: Integer Overflow.
+    reservedTokensData.isDistributed
+Integer Overflow occurs if:
+    mintingFinished = 0
+    mintAgents[msg.sender] = 255
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/44.sol:Ownable:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 99.5%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/44.sol:ReservedTokensFinalizeAgent:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 60.1%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/44.sol:1594:23: Warning: Integer Overflow.
+    uint endLooping = startLooping + batch
+Integer Overflow occurs if:
+    reservedTokensDistributionBatch = 110794988524387396331809141918678073524593265992944051760320974634531384459265
+    distributedReservedTokensDestinationsLen = 87321226144298698987138247421811360582692040390041828142092621723982266105856
+    reservedTokensAreDistributed = 0
+    crowdsale = 0
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/44.sol:SafeMath:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 100.0%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 False
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/44.sol:SafeMathLibExt:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 89.6%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/44.sol:151:14: Warning: Integer Overflow.
+    uint c = a + b
+Integer Overflow occurs if:
+    a = 1
+    b = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/44.sol:StandardToken:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 92.1%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/44.sol:44:14: Warning: Integer Overflow.
+    uint c = a + b
+Integer Overflow occurs if:
+    balances[_to] = 1
+INFO:symExec:	====== Analysis Completed ======
+INFO:root:contract smart/44.sol:UpgradeableToken:
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM Code Coverage: 			 94.5%
+INFO:symExec:	  Integer Underflow: 			 False
+INFO:symExec:	  Integer Overflow: 			 True
+INFO:symExec:	  Parity Multisig Bug 2: 		 False
+INFO:symExec:	  Callstack Depth Attack Vulnerability:  False
+INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
+INFO:symExec:	  Timestamp Dependency: 		 False
+INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
+INFO:symExec:smart/44.sol:44:14: Warning: Integer Overflow.
+    uint c = a + b
+Integer Overflow occurs if:
+    balances[_to] = 1
+INFO:symExec:	====== Analysis Completed ======
